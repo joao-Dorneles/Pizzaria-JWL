@@ -1,0 +1,261 @@
+
+header{
+    text-align: center;
+    text-align: center;
+    background-color: #cb4a34;
+    padding: 2vw;
+    height: auto;
+    position: relative;
+}
+#logoH{
+    width: 10vw;
+    border-radius: 100vw;
+    
+
+}
+
+body{ 
+    color:white;
+    margin: 0;
+    background-image: url(icons/pizzaFundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 10vw;
+    background-attachment: flex;
+    
+}
+#promosnav{
+    text-align: center;
+}
+.promodiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+}
+.promoB{
+    position: relative;
+    width: 20vw;
+    height: 25vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(0.5vw);
+    cursor: pointer;
+    border: none;
+    border-radius: 1.5vw;
+    margin: 1vw;
+    margin-top: 1.5vw;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+.promoB:hover{
+    transform: scale(1.1);
+    border: 0.2vw solid #f4eb7c;
+    backdrop-filter: blur(0.7vw);
+}
+.imgB{
+    position: absolute;
+    width: 18vw;
+    top: 1.3vw;
+    border-radius: 1vw;
+    border: 0.2vw solid #e8b653;
+}
+
+.link{
+    color: #f7f2de;
+    font-size: 2vw;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.1vw;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.linkP{
+    color: #f7f2de;
+    font-size: 2.7vw;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.1vw;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#Pepperoni{
+    margin-top: 8vw;
+}
+#Mussarela{
+    margin-top: 4vw;
+}
+#Portuguesa{
+    margin-top: 13vw;
+    font-size: 2vw;
+}
+#quatroqueijos{
+    margin-top: 13vw;
+    font-size: 2.2vw;
+}
+.Bmenu{
+    transform: scale(1);
+    transition: transform 0.3s;
+    background-color: rgb(0, 0, 0, 0);
+    border: none;
+    margin: none;
+   
+}
+#menu-div{
+    display: flex;
+    gap: 1vw;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+}
+.Bmenu:hover{
+    transform: scale(1.1);
+    color: #f7f2de;
+    text-shadow:  0vw 0vw 2vw #f7f2de;
+} 
+.Bmenu:visited{
+    color: #f7f2de;
+}
+.Bmenu:active{
+    color: #f7f2de;
+}
+
+
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+/*Tela menores como celulares*/
+@media (max-width: 768px){
+    
+header{
+    text-align: center;
+    text-align: center;
+    background-color: #cb4a34;
+    padding: 30px;
+    height: auto;
+    position: relative;
+}
+#logoH{
+    width: 20vw;
+    border-radius: 100vw;
+    
+
+}
+
+body{ 
+    color:white;
+    margin: 0;
+    background-image: url(icons/pizzaFundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 41vw;
+    background-attachment: flex;
+    
+}
+#promosnav{
+    text-align: center;
+}
+.promoB{
+    position: relative;
+    width: 60vw;
+    height: 70vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(0.5vw);
+    border: none;
+    border-radius: 4vw;
+    margin: 1vw;
+    margin-top: 4vw;
+    transform: scale(1);
+    transition: transform 0.3s;
+    -webkit-tap-highlight-color: transparent;
+}
+.promoB:hover{
+    transform: scale(1.1);
+    border: 0.5vw solid #f4eb7c;
+    backdrop-filter: blur(0.7vw);
+}
+.imgB{
+    position: absolute;
+    width: 55vw;
+    top: 1.3vw;
+    border-radius: 4vw;
+    border: 0.5vw solid #e8b653;
+    right: -0.1vw;
+    left: 1.8vw;
+}
+
+.link{
+    color: #f7f2de;
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.1vw;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-tap-highlight-color: transparent;
+}
+.linkP{
+    color: #f7f2de;
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.1vw;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-tap-highlight-color: transparent;
+}
+#Pepperoni{
+    margin-top: 30vw;
+}
+#Mussarela{
+    margin-top: 10vw;
+}
+#Portuguesa{
+    margin-top: 40vw;
+    font-size: 5vw;
+}
+#quatroqueijos{
+    margin-top: 30vw;
+    font-size: 6vw;
+}
+
+.Bmenu{
+    transform: scale(1);
+    transition: transform 0.3s;
+    background-color: rgb(0, 0, 0, 0);
+    border: none;
+    margin: none;
+    
+}
+#menu-div{
+    display: flex;
+    gap: 3vw;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+}
+.Bmenu:hover{
+    transform: scale(1.1);
+    color: #f7f2de;
+    text-shadow:  0vw 0vw 2vw #f7f2de;
+} 
+.Bmenu:visited{
+    color: #f7f2de;
+}
+.Bmenu:active{
+    color: #f7f2de;
+}
+
+
+}

@@ -1,0 +1,70 @@
+body{
+    background-color: #f7f2de;
+    margin: 0vw
+}
+#menuT{
+    background-color: #cb4a34;
+    padding: 5vw;
+    position: relative;
+}
+header{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5vw;
+}
+#voltar{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0vw;
+    position:absolute;
+    width: 4vw;
+    top: -0vw;
+    left: 0.5vw;
+    transform: scale(1);
+    transition: transform 0.3s;
+    -webkit-tap-highlight-color: transparent;
+}
+#voltar:hover{
+    transform: scale(1.1);
+}
+#imgseta{
+    width: 3vw;
+}
+
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+/*Area do celular*/
+@media (max-width: 768px){
+    body{
+        background-color: #f7f2de;
+        margin: 0vw;
+    }
+    #menuT{
+        background-color: #cb4a34;
+        padding: 10vw;
+        position: relative;
+    }
+    header{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #voltar{
+        position: absolute;
+        width: 10vw;
+        top: -0vw;
+        left: 0.5vw;
+    }
+    #imgseta{
+        width: 7vw;
+    }
+}
