@@ -10,7 +10,7 @@
 <body>
     <header>
         <div id="menu-div">
-            <button class="Bmenu"><a href="menu/menu.html" class="link">Menu</a></button>
+            <button class="Bmenu"><a href="#menu" class="link">Menu</a></button>
             <button class="Bmenu"><a href="#" class="link">Contatos</a></button>
             <button class="Bmenu"><a href="#" class="link">Sobre Nós</a></button>
             <button class="Bmenu"><a href="#" class="link">Galeria</a></button>
@@ -19,13 +19,43 @@
     </header>
     <nav id="promosnav">
         <div class="promodiv">
-            <button class="promoB"><a href="#" class="linkP" id="Pepperoni"><img class="imgB" src="icons/pepperoni.jpeg">Promoção Imperdível! 🍕Peça já sua pizza de Pepperoni!</a></button>
-            <button class="promoB"><a href="#" class="linkP" id="Mussarela"><img class="imgB"src="icons/Mussarela.png">Mussarela! Queijo!!!!! 🧀 Queijo Derretido 🫠</a></button>
-            <button class="promoB"><a href="#" class="linkP" id="Portuguesa"><img class="imgB" src="icons/Portuguesa.jpg">Eh gajo! 🍕 Não Perca uma Pizza Portuguesa desta!🇵🇹</a></button>
-            <button class="promoB"><a href="#" class="linkP" id="quatroqueijos"><img class="imgB" src="icons/4queijos.jpg">🍕O quarteto imbatível da culinária! 4 queijos🧀🧀🧀🧀</a></button>
+            <button class="promoB"><a href="#MPepperoni" class="linkP" id="Pepperoni"><img class="imgB" src="icons/pepperoni.jpeg">Promoção Imperdível! 🍕Peça já sua pizza de Pepperoni!</a></button>
+            <button class="promoB"><a href="#MMussarela" class="linkP" id="Mussarela"><img class="imgB"src="icons/Mussarela.png">Mussarela! Queijo!!!!! 🧀 Queijo Derretido 🫠</a></button>
+            <button class="promoB"><a href="#MPortuguesa" class="linkP" id="Portuguesa"><img class="imgB" src="icons/Portuguesa.jpg">Eh gajo! 🍕 Não Perca uma Pizza Portuguesa desta!🇵🇹</a></button>
+            <button class="promoB"><a href="#Mquatroqueijos" class="linkP" id="quatroqueijos"><img class="imgB" src="icons/4queijos.jpg">🍕O quarteto imbatível da culinária! 4 queijos🧀🧀🧀🧀</a></button>
         </div>
     </nav>
     <br>
-
     
+
+    <section id="menu">
+        <h3 class="txt" id="menutxt">Conheça Nosso Menu</h3>
+
+        <li><img id="MPepperoni" class="menuimg" src="icons/pepperoni.jpeg"></li>
+        <li><img id="Mmarguerita" class="menuimg" src="icons/marguerita.jpg"></li>
+        <li><img id="Mcamarao" class="menuimg" src="icons/camarao.jpg"></li>
+        <li><img id="MMussarela" class="menuimg" src="icons/Mussarela.png"></li>
+        <li><img id="Mvegetariana" class="menuimg" src="icons/vegetariana.jpg"></li>
+        <li><img id="Mquatroqueijos" class="menuimg" src="icons/4queijos.jpg"></li>
+        <li><img id="MPortuguesa" class="menuimg" src="icons/Portuguesa.jpg"></li>
+        <!--Bebidas-->
+        <li><img id="PPepperoni" class="menuimg" src=""></li>
+        <li><img id="PPepperoni" class="menuimg" src=""></li>
+    </section>
+
+    <script>
+        document.querySelectorAll('.promoB a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - (window.innerHeight / 2) + (targetElement.clientHeight / 2);
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
