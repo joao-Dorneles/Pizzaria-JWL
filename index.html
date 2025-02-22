@@ -17,6 +17,7 @@
         </div>
         <img id="logoH" src="icons/logo.jpeg" alt="logo"><br>Pizzara JWL
     </header>
+    <button id="voltar"><a href="#menu-div"><img id="seta" src="icons/seta.png"></a></button>
     <nav id="promosnav">
         <div class="promodiv">
             <button class="promoB"><a href="#MPepperoni" class="linkP" id="Pepperoni"><img class="imgB" src="icons/pepperoni.jpeg">Promoção Imperdível! 🍕Peça já sua pizza de Pepperoni!</a></button>
@@ -26,36 +27,34 @@
         </div>
     </nav>
     <br>
-    
+
 
     <section id="menu">
         <h3 class="txt" id="menutxt">Conheça Nosso Menu</h3>
 
-        <li><img id="MPepperoni" class="menuimg" src="icons/pepperoni.jpeg"></li>
+        <li class="destino"><img id="MPepperoni" class="menuimg" src="icons/pepperoni.jpeg"></li>
         <li><img id="Mmarguerita" class="menuimg" src="icons/marguerita.jpg"></li>
         <li><img id="Mcamarao" class="menuimg" src="icons/camarao.jpg"></li>
-        <li><img id="MMussarela" class="menuimg" src="icons/Mussarela.png"></li>
+        <li class="destino"><img id="MMussarela" class="menuimg" src="icons/Mussarela.png"></li>
         <li><img id="Mvegetariana" class="menuimg" src="icons/vegetariana.jpg"></li>
-        <li><img id="Mquatroqueijos" class="menuimg" src="icons/4queijos.jpg"></li>
-        <li><img id="MPortuguesa" class="menuimg" src="icons/Portuguesa.jpg"></li>
+        <li class="destino"><img id="Mquatroqueijos" class="menuimg" src="icons/4queijos.jpg"></li>
+        <li class="destino"><img id="MPortuguesa" class="menuimg" src="icons/Portuguesa.jpg"></li>
         <!--Bebidas-->
-        <li><img id="PPepperoni" class="menuimg" src=""></li>
-        <li><img id="PPepperoni" class="menuimg" src=""></li>
+        <li><img id="#" class="menuimg" src=""></li>
+        <li><img id="#" class="menuimg" src=""></li>
     </section>
-
     <script>
-        document.querySelectorAll('.promoB a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition - (window.innerHeight / 2) + (targetElement.clientHeight / 2);
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+        document.querySelectorAll('.linkP').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault();
+                const destinoId = this.getAttribute('href');
+                const destino = document.querySelector(destinoId);
+                destino.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                destino.parentElement.classList.add('destacar');
+                setTimeout(() => {
+                    destino.parentElement.classList.remove('destacar');
+                }, 3000);
             });
         });
-    </script>
+    </script> <!--FINALMENTE DEU CERTO, DEPOIS DE UMA MANHÃ INTEIRAAA AHHHGG-->
 </body>
