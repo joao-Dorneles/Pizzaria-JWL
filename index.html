@@ -11,19 +11,19 @@
     <header>
         <div id="menu-div">
             <button class="Bmenu"><a href="#menu" class="link">Menu</a></button>
-            <button class="Bmenu"><a href="#" class="link">Contatos</a></button>
-            <button class="Bmenu"><a href="#" class="link">Sobre Nós</a></button>
+            <button class="Bmenu"><a href="#sobre" class="link">Sobre Nós</a></button>
             <button class="Bmenu"><a href="#" class="link">Galeria</a></button>
+            <button class="Bmenu"><a href="#" class="link">Contato</a></button>
         </div>
-        <img id="logoH" src="icons/logo.jpeg" alt="logo"><br>Pizzara JWL
+        <img id="logoH" src="icons/logo.jpeg" alt="logo" loading="lazy"><br>Pizzara JWL
     </header>
     <button id="voltar"><a href="#menu-div"><img id="seta" src="icons/seta.png"></a></button>
     <nav id="promosnav">
         <div class="promodiv">
-            <button class="promoB"><a href="#MPepperoni" class="linkP" id="Pepperoni"><img class="imgB" src="icons/pepperoni.jpeg">Promoção Imperdível! 🍕Peça já sua pizza de Pepperoni!</a></button>
-            <button class="promoB"><a href="#MMussarela" class="linkP" id="Mussarela"><img class="imgB"src="icons/Mussarela.png">Mussarela! Queijo!!!!! 🧀 Queijo Derretido 🫠</a></button>
-            <button class="promoB"><a href="#MPortuguesa" class="linkP" id="Portuguesa"><img class="imgB" src="icons/Portuguesa.jpg">Eh gajo! 🍕 Não Perca uma Pizza Portuguesa desta!🇵🇹</a></button>
-            <button class="promoB"><a href="#Mquatroqueijos" class="linkP" id="quatroqueijos"><img class="imgB" src="icons/4queijos.jpg">🍕O quarteto imbatível da culinária! 4 queijos🧀🧀🧀🧀</a></button>
+            <button class="promoB"><a href="#MPepperoni" class="linkP" id="Pepperoni"><img class="imgB" src="icons/pepperoni.jpeg" loading="lazy">Promoção Imperdível! 🍕Peça já sua pizza de Pepperoni!</a></button>
+            <button class="promoB"><a href="#MMussarela" class="linkP" id="Mussarela"><img class="imgB"src="icons/Mussarela.png" loading="lazy">Mussarela! Queijo!!!!! 🧀 Queijo Derretido 🫠</a></button>
+            <button class="promoB"><a href="#MPortuguesa" class="linkP" id="Portuguesa"><img class="imgB" src="icons/Portuguesa.jpg" loading="lazy">Eh gajo! 🍕 Não Perca uma Pizza Portuguesa desta!🇵🇹</a></button>
+            <button class="promoB"><a href="#Mquatroqueijos" class="linkP" id="quatroqueijos"><img class="imgB" src="icons/4queijos.jpg" loading="lazy">🍕O quarteto imbatível da culinária! 4 queijos🧀🧀🧀🧀</a></button>
         </div>
     </nav>
     <br>
@@ -31,18 +31,39 @@
 
     <section id="menu">
         <h3 class="txt" id="menutxt">Conheça Nosso Menu</h3>
-
-        <li class="destino"><img id="MPepperoni" class="menuimg" src="icons/pepperoni.jpeg"></li>
-        <li><img id="Mmarguerita" class="menuimg" src="icons/marguerita.jpg"></li>
-        <li><img id="Mcamarao" class="menuimg" src="icons/camarao.jpg"></li>
-        <li class="destino"><img id="MMussarela" class="menuimg" src="icons/Mussarela.png"></li>
-        <li><img id="Mvegetariana" class="menuimg" src="icons/vegetariana.jpg"></li>
-        <li class="destino"><img id="Mquatroqueijos" class="menuimg" src="icons/4queijos.jpg"></li>
-        <li class="destino"><img id="MPortuguesa" class="menuimg" src="icons/Portuguesa.jpg"></li>
-        <!--Bebidas-->
-        <li><img id="#" class="menuimg" src=""></li>
-        <li><img id="#" class="menuimg" src=""></li>
+        <ul>
+            <li class="destino"><img id="MPepperoni" class="menuimg" src="icons/pepperoni.jpeg" loading="lazy"><h3 class="prato" id="Ppepperoni">Pizza de Pepperoni<br>R$ 55,00</h3><p class="info">mussarela, pepperoni e cebola</p></li>
+            <li><img id="Mmarguerita" class="menuimg" src="icons/marguerita.jpg" loading="lazy"><h3 class="prato" id="Pmarguerita">Pizza de Marguerita<br>R$ 50,00</h3><p class="info">mussarela, rodelas de tomate e manjericão</p></li>
+            <li><img id="Mcamarao" class="menuimg" src="icons/camarao.jpg"><h3 class="prato" id="Pcamarao">Pizza de Camarão<br>R$ 65,00</h3><p class="info">camarão, molho de tomate, mussarela e catupiry</p></li>
+            <li class="destino"><img id="MMussarela" class="menuimg" src="icons/Mussarela.png" loading="lazy"><h3 class="prato" id="Pmussarela">Pizza de Mussarela<br>R$ 45,00</h3><p class="info">mussarela, rodelas de tomate e orégano</p></li>
+            <li><img id="Mvegetariana" class="menuimg" src="icons/vegetariana.jpg" loading="lazy"><h3 class="prato" id="Pizzavegetariana">Pizza Vegetariana<br>R$ 50,00</h3><p class="info">mussarela, pimentão, cebola, azeitona, ervilha, tomate, palmito, milho e orégano</p></li>
+            <li class="destino"><img id="Mquatroqueijos" class="menuimg" src="icons/4queijos.jpg" loading="lazy"><h3 class="prato" id="Pquatroqueijos">Pizza 4 queijos<br>R$ 55,00</h3><p class="info">mussarela, parmesão, gorgonzola e provolone.</p></li>
+            <li class="destino"><img id="MPortuguesa" class="menuimg" src="icons/Portuguesa.jpg" loading="lazy"><h3 class="prato" id="Pportuguesa">Pizza Portuguesa<br>R$ 52,00</h3><p class="info">mussarela, ovos, palmito, pimentão, ervilha, presunto e cebola</p></li>
+            <!--Bebidas-->
+        <h3 class="txt" id="Bebidas">Bebidas</h3>
+      
+            <li><img id="#cocacola" class="menuimg" src="icons/cocacola.jpg"><h3 class="prato" id="refricc">Refrigerante Coca-Cola<BR>$ 5,00 - R$ 15,00</h3><p class="info">Opções de 250ml, 500ml, 1L e 2L</p></li>
+            <li><img id="suco" class="menuimg" src="icons/suco.jpg"><h3 class="prato" id="sucom">Suco de Maracujá Natural<br>R$ 5,00 e R$ 8,00</h3><p class="info">Opções de 250ml e 500ml</p></li>
+        </ul>
     </section>
+    <!--Contato formulário-->
+    <section id="sobre">
+            <details>
+                <summary>Clique e Descubra um Pouco sobre nossa História</summary>
+                <p id="sobrenos"><strong>---Sobre Nós</strong><br>
+                Bem-vindo à Pizzaria JWL, onde tradição e sabor se<br>encontram para criar experiências inesquecíveis!
+                <br><strong>História</strong><br>
+                A Pizzaria JWL nasceu da paixão pela culinária e do<br>desejo de oferecer pizzas artesanais de alta qualidade. Desde o primeiro forno aceso, buscamos combinar ingredientes frescos, receitas autênticas e um toque especial em cada criação. Ao longo do tempo, conquistamos clientes fiéis e nos tornamos referência para quem busca sabor, qualidade e um ambiente acolhedor.
+                <br><strong>Nossa Missão</strong><br>
+                <br>Nosso compromisso é proporcionar momentos de felicidade através<br>da pizza. Valorizamos cada detalhe, desde a escolha dos ingredientes até o atendimento, garantindo uma experiência gastronômica única para nossos clientes.
+                <br><strong>Visão</strong><br>
+                Queremos ser reconhecidos como a melhor pizzaria da região,<br>oferecendo inovação no cardápio, excelência no serviço e mantendo o amor pela tradição que nos trouxe até aqui. Buscamos sempre crescer, mantendo a qualidade e a essência que fazem da Pizzaria JWL um lugar especial.
+                Seja para um jantar especial, uma reunião com amigos ou um momento<br>descontraído, estamos prontos para servir a melhor pizza com muito carinho. Venha nos visitar ou peça no conforto da sua casa e descubra por que a Pizzaria JWL é sinônimo de sabor e tradição!</p>
+            </details>
+    </section>
+
+
+
     <script>
         document.querySelectorAll('.linkP').forEach(item => {
             item.addEventListener('click', function(event) {
@@ -53,8 +74,16 @@
                 destino.parentElement.classList.add('destacar');
                 setTimeout(() => {
                     destino.parentElement.classList.remove('destacar');
-                }, 3000);
+                }, 1500);
             });
         });
+        document.querySelectorAll('#menu li').forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            const info = this.querySelector('.info');
+            info.classList.toggle('show');
+        });
+    });
+</script>
     </script> <!--FINALMENTE DEU CERTO, DEPOIS DE UMA MANHÃ INTEIRAAA AHHHGG-->
 </body>

@@ -42,6 +42,7 @@ body{
     border-bottom:solid 0.5vw #e8b653;
     margin-top: 10vw;
     margin-bottom: 2vw;
+    border-radius: 2vw;
 }
 #promosnav{
     text-align: center;
@@ -120,6 +121,7 @@ body{
     background-color: rgb(0, 0, 0, 0);
     border: none;
     margin: none;
+
    
 }
 #menu-div{
@@ -148,7 +150,11 @@ body{
     border-radius: 5%;
     border: 0.2vw solid #e8b653;
 }
+ul{
+    padding: 0vw;
+}
 li{
+    position: relative;
     list-style-type:none;
     border-radius: 2vw;
     backdrop-filter: blur(1vw);
@@ -164,10 +170,7 @@ li:hover{
     border: 0.5vw solid #f4eb7c;
     backdrop-filter: blur(0.7vw);
 }
-#pepepromo{
-    transform: scale(0.9);
-    transition: transform 0.3s;
-}
+
 li.destacar {
     transform: scale(1);
     transition: transform 0.3s ease;
@@ -175,6 +178,26 @@ li.destacar {
     box-shadow: 0px 0px 50px #cb4a34;
     background-color: #cb4b34a8;
 }
+li .info {
+    font-size: 2.5vw;
+    display: none;
+    position: absolute;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e8b653d7;
+    color: #060912;
+    padding: 5px 10vw;
+    border-radius: 0.5vw;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+li .info.show {
+    display: block;
+    opacity: 1;
+    bottom: 7vw;
+}
+    
 #voltar {
     position: fixed;
     bottom: 1vw;
@@ -194,6 +217,117 @@ li.destacar {
     background-color: #e8b653;
 }
 
+#Bebidas{
+    color: #f7f2de;
+    font-size: 5vw;
+    text-align: center;
+    border: solid 0.5vw #cb4a34;
+    border-bottom:solid 0.5vw #e8b653;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    margin-left: 30vw;
+    margin-right: 20vw;
+    border-radius: 100vw;
+    width: 40vw;
+
+}
+.prato{
+    position: absolute;
+    color: #f7f2de;
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    bottom: 10vw;
+    left:35vw;
+}
+#Ppepperoni{
+    color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 3vw;
+}
+#Pmarguerita{
+    color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 4vw;
+}
+#Pcamarao{
+    color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 4vw;
+    text-shadow: 0vw 0vw 1vw black;
+}
+#Pmussarela{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 1vw;
+} 
+#Pizzavegetariana{ /*O id ta diferente dos outros semlhantes pq eu não consegui mexer no posicionamento por alguma razão*/
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 3vw;
+} 
+#Pquatroqueijos{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 2.5vw;
+} 
+#Pportuguesa{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 4vw;
+} 
+#refricc{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 3vw;
+} 
+#sucom{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 4vw;
+    left: 28vw;
+} 
+
+summary:hover{
+    cursor: pointer;
+}
+summary{
+    color: #f7f2de;
+    text-align: center;
+    font-size: 3.5vw;
+    border: solid 0.5vw #cb4a34;
+    border-bottom:solid 0.5vw #e8b653;
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+    border-radius: 2vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    background-color: #cb4b34a6;
+}
+#sobrenos{
+    font-size: 2vw;
+    background-color: #e8b653d7;
+    color: #060912;
+    border-radius: 2vw;
+}
 /*Tela menores como celulares*/
 /*Tela menores como celulares*/
 /*Tela menores como celulares*/
@@ -376,10 +510,129 @@ li.destacar {
     cursor: pointer;
     z-index: 1000;
     transition: transform 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #voltar:hover {
     transform: scale(1.1);
     background-color: #e8b653;
 }
+#Bebidas{
+    color: #f7f2de;
+    text-align: center;
+    font-size: 8vw;
+    border: solid 0.5vw #cb4a34;
+    border-bottom:solid 0.5vw #e8b653;
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    border-radius: 100vw;
+    width: 60vw;
+}
+.prato{
+    -webkit-tap-highlight-color: transparent;
+}
+.prato{
+    position: absolute;
+    color: #f7f2de;
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    bottom: 10vw;
+    left:35vw;
+}
+#Ppepperoni{
+    color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 7vw;
+    left: 37vw;
+}
+#Pmarguerita{
+    color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 8vw;
+    left: 37vw;
+}
+#Pcamarao{
+    color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 8vw;
+    left: 39vw;
+}
+#Pmussarela{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 5vw;
+    left: 38vw;
+} 
+#Pizzavegetariana{ /*O id ta diferente dos outros semlhantes pq eu não consegui mexer no posicionamento por alguma razão*/
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 7vw;
+    left: 39.5vw;
+} 
+#Pquatroqueijos{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 6vw;
+    left: 43vw;
+} 
+#Pportuguesa{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 8vw;
+    left: 40vw;
+} 
+#refricc{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 6vw;
+    left:33vw;
+} 
+#sucom{
+   color:#f7f2de;
+    position:absolute;
+    margin: 0vw;
+    text-align: center;
+    top: 5vw;
+    left: 29vw;
+} 
+li .info {
+    font-size: 4vw;
+    display: none;
+    position: absolute;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e8b653d7;
+    color: #060912;
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+li .info.show {
+    display: block;
+    opacity: 1;
+    bottom: 15vw;
+}
+
+
 }
