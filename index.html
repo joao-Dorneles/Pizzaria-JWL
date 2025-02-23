@@ -12,8 +12,8 @@
         <div id="menu-div">
             <button class="Bmenu"><a href="#menu" class="link">Menu</a></button>
             <button class="Bmenu"><a href="#sobre" class="link">Sobre Nós</a></button>
-            <button class="Bmenu"><a href="#" class="link">Galeria</a></button>
-            <button class="Bmenu"><a href="#" class="link">Contato</a></button>
+            <button class="Bmenu"><a href="#galeriaimg" class="link">Galeria</a></button>
+            <button class="Bmenu"><a href="#form" class="link">Contato</a></button>
         </div>
         <img id="logoH" src="icons/logo.jpeg" alt="logo" loading="lazy"><br>Pizzara JWL
     </header>
@@ -50,21 +50,82 @@
     <section id="sobre">
             <details>
                 <summary>Clique e Descubra um Pouco sobre nossa História</summary>
-                <p id="sobrenos"><strong>---Sobre Nós</strong><br>
-                Bem-vindo à Pizzaria JWL, onde tradição e sabor se<br>encontram para criar experiências inesquecíveis!
-                <br><strong>História</strong><br>
-                A Pizzaria JWL nasceu da paixão pela culinária e do<br>desejo de oferecer pizzas artesanais de alta qualidade. Desde o primeiro forno aceso, buscamos combinar ingredientes frescos, receitas autênticas e um toque especial em cada criação. Ao longo do tempo, conquistamos clientes fiéis e nos tornamos referência para quem busca sabor, qualidade e um ambiente acolhedor.
-                <br><strong>Nossa Missão</strong><br>
-                <br>Nosso compromisso é proporcionar momentos de felicidade através<br>da pizza. Valorizamos cada detalhe, desde a escolha dos ingredientes até o atendimento, garantindo uma experiência gastronômica única para nossos clientes.
-                <br><strong>Visão</strong><br>
-                Queremos ser reconhecidos como a melhor pizzaria da região,<br>oferecendo inovação no cardápio, excelência no serviço e mantendo o amor pela tradição que nos trouxe até aqui. Buscamos sempre crescer, mantendo a qualidade e a essência que fazem da Pizzaria JWL um lugar especial.
-                Seja para um jantar especial, uma reunião com amigos ou um momento<br>descontraído, estamos prontos para servir a melhor pizza com muito carinho. Venha nos visitar ou peça no conforto da sua casa e descubra por que a Pizzaria JWL é sinônimo de sabor e tradição!</p>
+                <p id="sobrenos"><span id= "SobrenosT"><strong>Sobre Nós</strong></span><br>
+                <span id="BemVindo">Bem-vindo à Pizzaria JWL, onde tradição e sabor se<br>encontram para criar experiências inesquecíveis!</span>
+                <br><span id="Historia"><strong>História</strong></span><br>
+                <span id="nossahistoria">A Pizzaria JWL nasceu da paixão pela culinária e do<br>desejo de oferecer pizzas artesanais de alta qualidade. Desde o primeiro forno aceso, buscamos combinar ingredientes frescos, receitas autênticas e um toque especial em cada criação. Ao longo do tempo, conquistamos clientes fiéis e nos tornamos referência para<br>quem busca sabor, qualidade e um ambiente acolhedor.</span>
+                <br><span id="missao"><strong>Nossa Missão</strong></span><br>
+                <br><span id="compromisso">Nosso compromisso é proporcionar momentos de felicidade através<br>da pizza. Valorizamos cada detalhe, desde a escolha dos ingredientes até o atendimento, garantindo uma experiência gastronômica única para nossos clientes.</span>
+                <br><span id="visao"><strong>Visão</strong></span><br>
+                <span id="nossavisao">Queremos ser reconhecidos como a melhor pizzaria da região,<br>oferecendo inovação no cardápio, excelência no serviço e<br>mantendo o amor pela tradição que nos trouxe até aqui. Buscamos sempre crescer,<br>mantendo a qualidade e a essência que fazem da Pizzaria JWL um lugar especial.
+                Seja para um jantar especial, uma reunião com amigos ou um momento<br>descontraído, estamos prontos para servir a melhor pizza com muito carinho.<br>Venha nos visitar ou peça no conforto da sua casa e descubra por que a Pizzaria JWL é sinônimo de sabor e tradição!</span></p> 
             </details>
     </section>
+    <section id="galeriaimg"><h3 class="txt" id="txtgaleria">Conheça Nosso Ambiente</h3>
+        <div class="galeria">
+            <div class="textoGlr">
+                <a href="icons/HallCentral.jpeg">
+                    <img src="icons/HallCentral.jpeg" alt="img1" class="imagem" id="HallCentral">
+                </a>
+                <p class="Pglr">Salão Principal</p>
+            </div>
+            <div class="textoGlr">
+                <a href="icons/banheiro.jpg">
+                    <img src="icons/banheiro.jpg" alt="img1" class="imagem" id="banheiro">
+                </a>
+                <p class="Pglr">Banheiros<br>Higienizados</p>
+            </div>
+            <div class="textoGlr">
+                <a href="icons/HallJogos.jpg">
+                    <img src="icons/HallJogos.jpg" alt="img1" class="imagem" id="HallJogos">
+                </a>
+                <p class="Pglr">Hall De Games</p>
+            </div>
+            <div class="textoGlr">
+                <a href="icons/playground.jpg">
+                    <img src="icons/playground.jpg" alt="img1" class="imagem" id="playground">
+                </a>
+                <p class="Pglr">Playground<br>Kids</p>
+            </div>
+            <div class="textoGlr">
+                <a href="icons/mural.png">
+                    <img src="icons/mural.png" alt="img1" class="imagem" id="mural">
+                </a>
+                <p class="Pglr">Mural de Fotos</p>
+            </div>
+        </div>
+    </section>
+    <div id="ampliar" class="ampliar">
+        <span class="close">&times;</span>
+        <img class="ampliar-content" id="ampliar-img">
+    </div>
 
+    <section id="form">
+        <h3 class="txt" id="txtform">Contato</h3>
+        <div id="contato">
+            <form id="meuform">
+                 <label class="labelF">Informe seu nome</label><br>
+                 <input type="name" class="infos" id="nome" placeholder="Exemplo da Silva Carvalho" required>
+                 <span id="nomeError" class="msgerro">Nome deve ter pelo menos 3 caracteres</span><br><br>
+                 <br>
+                <label class="labelF">Informe seu e-mail</label><br>
+                 <input type="text" class="infos" id="email" placeholder="Ex. exemplo123@gmail.com" required>
+                 <span id="emailerro" class="msgerro">Email inválido</span><br><br>
+                 <br>
+                 <label class="labelF">Envie uma mensagem</label><br>
+                 <input type="text" class="infos" id="mensagem" placeholder="Nos envie uma mensagem" rows="4">
+                <br>
+                 <button type="submit" id="enviar"><span id="Benviar">Enviar</span></button>
+            </form>
+        </div>
+      </section>
+    </section>
 
-
+    <div id="rodape">
+        <footer>© 2025 Pizzaria JWL. Todos os direitos reservados.</footer>
+    </div>
     <script>
+        //destaca elementos correspondente aos links das promções
         document.querySelectorAll('.linkP').forEach(item => {
             item.addEventListener('click', function(event) {
                 event.preventDefault();
@@ -76,7 +137,8 @@
                     destino.parentElement.classList.remove('destacar');
                 }, 1500);
             });
-        });
+        }); //FINALMENTE DEU CERTO, DEPOIS DE UMA MANHÃ INTEIRAAA AHHHGG
+        //exibe informações dos pratos
         document.querySelectorAll('#menu li').forEach(item => {
         item.addEventListener('click', function(event) {
             event.preventDefault();
@@ -84,6 +146,62 @@
             info.classList.toggle('show');
         });
     });
+    //amplia imgs da galeria
+    const ampliar = document.getElementById('ampliar');
+    const ampliarImg = document.getElementById('ampliar-img');
+    const closeBtn = document.querySelector('.ampliar .close');
+    document.querySelectorAll('.ampliar-trigger').forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            ampliar.style.display = 'block';
+            ampliarImg.src = this.href;
+        });
+    });
+    closeBtn.addEventListener('click', function() {
+        ampliar.style.display = 'none';
+    });
+    ampliar.addEventListener('click', function(event) {
+        if (event.target === ampliar) {
+            ampliar.style.display = 'none';
+        }
+    });
+    //Validação do formulario
+    document.getElementById("meuform").addEventListener("submit", function(event) {
+        event.preventDefault();
+        let valid = true;
+
+        let nome = document.getElementById("nome");
+        let nomeError = document.getElementById("nomeError");
+        if (nome.value.length < 3) {
+            nome.classList.remove("success");
+            nome.classList.add("error");
+            nomeError.style.display = "block";
+            valid = false;
+        } else {
+            nome.classList.remove("error");
+            nome.classList.add("success");
+            nomeError.style.display = "none";
+        }
+        let email = document.getElementById("email");
+        let emailerro = document.getElementById("emailerro");
+        let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!email.value.match(emailPattern)) {
+            email.classList.remove("success");
+            email.classList.add("error");
+            emailerro.style.display = "block";
+            valid = false;
+        } else {
+            email.classList.remove("error");
+            email.classList.add("success");
+            emailerro.style.display = "none";
+        }
+        if (valid) {
+            alert("Informações Enviadas com Sucesso");
+            document.getElementById("meuform").reset();
+            document.querySelectorAll('.infos').forEach(item => {
+                item.classList.remove('success');
+            });
+        }
+    });
 </script>
-    </script> <!--FINALMENTE DEU CERTO, DEPOIS DE UMA MANHÃ INTEIRAAA AHHHGG-->
 </body>
