@@ -5,7 +5,6 @@ html {
 
 header{
     text-align: center;
-    text-align: center;
     background-color: #cb4a34;
     padding: 2vw;
     height: auto;
@@ -569,6 +568,123 @@ input{
     border: solid 0.2vw #e8b653 !important;
     transition: background-color 5000s ease-in-out 0s !important;
 }
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15vw;
+    padding: 2vw;
+    border-radius: 2vw;
+}
+#successoPopup{
+    border: 0.1vw solid green;
+    background-color: rgba(0, 128, 0, 0.89);
+    box-shadow: 0 0 4vw green;
+}
+#erroPopup{
+    border: 0.1vw solid red;
+    background-color: rgba(255, 0, 0, 0.89);
+    box-shadow: 0 0 4vw red;
+}
+.popup .close{
+    position: absolute;
+    top: 1vw;
+    right: 2vw;
+    font-size: 6vw;
+    cursor: pointer;
+}
+
+.popup p{
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.stars {
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+    justify-content: center;
+}
+.star {
+    color: #cb4a34;
+    transition: color 0.2s;
+}
+.star.active,
+.star:hover,
+.star.hovered {
+    color: gold;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 5.2vw;
+    height: 2.9vw;
+    left: 45vw;
+    bottom: 15vw;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.5vw;
+    width: 2.5vw;
+    left: 0.4vw;
+    bottom: 0.2vw;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 3.4vw;
+}
+
+.slider.round:before {
+    border-radius: 100vw;
+}
+/*modo escuro*/
+body.dark-mode{
+    background-image: url(icons/wallpaperDark.jpg);
+}
+body.dark-mode header{
+    background-color: #5a1d14;
+    text-shadow: 0 0 2vw #f7f2de;
+}
+
 /*Tela menores como celulares*/
 /*Tela menores como celulares*/
 /*Tela menores como celulares*/
@@ -1046,6 +1162,102 @@ input{
     display: none;
     color: red;
     font-size: 3vw;    
+}
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 2vw;
+    border-radius: 5vw;
+}
+#successoPopup{
+    border: 0.1vw solid green;
+    background-color: rgba(0, 128, 0, 0.89);
+    box-shadow: 0 0 4vw green;
+}
+#erroPopup{
+    border: 0.1vw solid red;
+    background-color: rgba(255, 0, 0, 0.89);
+    box-shadow: 0 0 4vw red;
+}
+.popup .close {
+    position: absolute;
+    top: 1vw;
+    right: 2vw;
+    font-size: 6vw;
+    cursor: pointer;
+}
+
+.popup p {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+.stars {
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 12.5vw;
+    height: 6.8vw;
+    top: 6vw;
+    left: 40vw;
+    margin-top: 0vw;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 5vw;
+    width: 5vw;
+    left: 0.4vw;
+    bottom: 0.9vw;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 3.4vw;
+}
+
+.slider.round:before {
+    border-radius: 100vw;
 }
 
 }

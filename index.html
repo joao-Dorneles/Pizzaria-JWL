@@ -16,6 +16,12 @@
             <button class="Bmenu"><a href="#form" class="link">Contato</a></button>
         </div>
         <img id="logoH" src="icons/logo.jpeg" alt="logo" loading="lazy"><br>Pizzara JWL
+        <div id="tema">
+            <label class="switch">
+                <input type="checkbox" id="modoVisual">
+                <span class="slider round"></span>
+            </label>
+        </div>
     </header>
     <button id="voltar"><a href="#menu-div"><img id="seta" src="icons/seta.png"></a></button>
     <nav id="promosnav">
@@ -96,7 +102,7 @@
         </div>
     </section>
     <div id="ampliar" class="ampliar">
-        <span class="close">&times;</span>
+        <span class="fechar">&times;</span>
         <img class="ampliar-content" id="ampliar-img">
     </div>
 
@@ -115,11 +121,32 @@
                  <label class="labelF">Envie uma mensagem</label><br>
                  <input type="text" class="infos" id="mensagem" placeholder="Nos envie uma mensagem" rows="4">
                 <br>
+                <label class="labelF" for="rating">Avalie nosso site:</label><br>
+                <div class="stars">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <input type="hidden" id="rating" name="rating" value="0">
+                <p>Nota selecionada: <span id="rating-value">0</span></p>            
+            <br><br>
                  <button type="submit" id="enviar"><span id="Benviar">Enviar</span></button>
             </form>
         </div>
-      </section>
     </section>
+
+    <div id="erroPopup" class="popup">
+        <span class="fechar" onclick="fecharPopup('erroPopup')">&times;</span>
+        <p id="errorMensagem"></p>
+    </div>
+
+
+    <div id="successoPopup" class="popup">
+        <span class="fechar" onclick="fecharPopup('successoPopup')">&times;</span>
+        <p>Informações Enviadas com Sucesso</p>
+    </div>
 
     <div id="rodape">
         <footer>© 2025 Pizzaria JWL. Todos os direitos reservados.</footer>
@@ -149,7 +176,7 @@
     //amplia imgs da galeria
     const ampliar = document.getElementById('ampliar');
     const ampliarImg = document.getElementById('ampliar-img');
-    const closeBtn = document.querySelector('.ampliar .close');
+    const fecharBtn = document.querySelector('.ampliar .fechar');
     document.querySelectorAll('.ampliar-trigger').forEach(item => {
         item.addEventListener('click', function(event) {
             event.preventDefault();
@@ -157,7 +184,7 @@
             ampliarImg.src = this.href;
         });
     });
-    closeBtn.addEventListener('click', function() {
+    fecharBtn.addEventListener('click', function() {
         ampliar.style.display = 'none';
     });
     ampliar.addEventListener('click', function(event) {
@@ -166,41 +193,118 @@
         }
     });
     //Validação do formulario
-    document.getElementById("meuform").addEventListener("submit", function(event) {
-        event.preventDefault();
-        let valid = true;
-
+    function validateNome() {
         let nome = document.getElementById("nome");
         let nomeError = document.getElementById("nomeError");
         if (nome.value.length < 3) {
             nome.classList.remove("success");
             nome.classList.add("error");
             nomeError.style.display = "block";
-            valid = false;
+            return false;
         } else {
             nome.classList.remove("error");
             nome.classList.add("success");
             nomeError.style.display = "none";
+            return true;
         }
+    }
+    function validateEmail() {
         let email = document.getElementById("email");
-        let emailerro = document.getElementById("emailerro");
+        let emailError = document.getElementById("emailerro");
         let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         if (!email.value.match(emailPattern)) {
             email.classList.remove("success");
             email.classList.add("error");
-            emailerro.style.display = "block";
-            valid = false;
+            emailError.style.display = "block";
+            return false;
         } else {
             email.classList.remove("error");
             email.classList.add("success");
-            emailerro.style.display = "none";
+            emailError.style.display = "none";
+            return true;
         }
+    }
+    document.getElementById("nome").addEventListener("input", validateNome);
+    document.getElementById("email").addEventListener("input", validateEmail);
+    function showPopup(popupId, message) {
+        const popup = document.getElementById(popupId);
+        if (message) {
+            popup.querySelector('p').textContent = message;
+        }
+        popup.style.display = 'block';
+    }
+    function fecharPopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+    }
+
+    // Sistema de avaliação !*PRECISEI DE I.A PRA FAZER ESSE SISTEMA*!
+    document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".star");
+            const ratingInput = document.getElementById("rating");
+            const ratingValue = document.getElementById("rating-value");
+
+            stars.forEach(star => {
+                star.addEventListener("click", function () {
+                    const value = this.getAttribute("data-value");
+                    ratingInput.value = value;
+                    ratingValue.textContent = value;
+
+                    stars.forEach(s => {
+                        s.classList.toggle("active", s.getAttribute("data-value") <= value);
+                    });
+                });
+                star.addEventListener("mouseover", function () {
+                    const value = this.getAttribute("data-value");
+                    stars.forEach(s => {
+                        s.classList.toggle("hovered", s.getAttribute("data-value") <= value);
+                    });
+                });
+                star.addEventListener("mouseout", function () {
+                    stars.forEach(s => s.classList.remove("hovered"));
+                });
+            });
+        });
+
+    document.getElementById("meuform").addEventListener("submit", function(event) {
+        event.preventDefault();
+        let valid = true;
+        if (!validateNome()) valid = false;
+        if (!validateEmail()) valid = false;
         if (valid) {
-            alert("Informações Enviadas com Sucesso");
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const mensagem = document.getElementById("mensagem").value;
+            const rating = document.getElementById("rating").value;
+            const avaliacao = {
+                nome,
+                email,
+                mensagem,
+                rating
+            };
+            let avaliacoes = JSON.parse(localStorage.getItem('avaliacoes')) || [];
+            avaliacoes.push(avaliacao);
+            localStorage.setItem('avaliacoes', JSON.stringify(avaliacoes));
+            showPopup('successoPopup');
             document.getElementById("meuform").reset();
             document.querySelectorAll('.infos').forEach(item => {
                 item.classList.remove('success');
             });
+            document.querySelectorAll('.star').forEach(star => star.classList.remove('selected'));
+        } else {
+            showPopup('erroPopup', 'Por favor, corrija os erros no formulário.');
+        }
+    });
+        document.getElementById("modoVisual").addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
+        const isDarkMode = document.body.classList.contains("dark-mode");
+        localStorage.setItem("darkMode", isDarkMode);
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const darkMode = localStorage.getItem("darkMode") === "true";
+        if (darkMode) {
+            document.body.classList.add("dark-mode");
+            document.getElementById("modoVisual").checked = true;
         }
     });
 </script>
